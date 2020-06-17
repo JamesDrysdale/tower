@@ -35,6 +35,18 @@ public class Towers {
         }
     }
 
+    public Guest removeGuest(Guest guest){
+        return this.allGuests.remove(0);
+    }
+
+    //Add guests to lobby
+        public void addGuestToRoom(Guest guestList){
+            this.allGuests.add(guestList);
+    }
+
+        public void addBedroom(Bedroom bedroom){
+            this.bedrooms.add(bedroom);
+        }
 
 
 }

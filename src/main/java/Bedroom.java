@@ -32,14 +32,14 @@ public class Bedroom {
         return this.guestList.size();
     }
 
-    public void addGuestToBedroom(Guest guestList){
-        if(this.guestCount() < this.capacity)
-        this.guestList.add(guestList);
-    }
-
     public String getBedroomType(){
         return this.type;
     }
+
+        public void addGuestToBedroom(Guest guestList){
+        if(this.guestCount() < this.capacity)
+            this.guestList.add(guestList);
+        }
 
 
 }
