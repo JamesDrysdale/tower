@@ -5,17 +5,25 @@ import static org.junit.Assert.assertEquals;
 
 public class BedroomTest {
     private Bedroom bedroom;
+    private Bedroom bedroom2;
     private Guest guest;
 
     @Before
     public void before() {
-        bedroom = new Bedroom("The Royal Suite", 22, 2);
+        bedroom = new Bedroom("The Royal Suite", 22, 2, "single");
+        bedroom2 = new Bedroom("Presidential Suite", 420, 4, "double");
+
         guest = new Guest("Jessica");
     }
 
     @Test
     public void roomHasName() {
         assertEquals("The Royal Suite", bedroom.getBedroomName());
+    }
+
+    @Test
+    public void roomHasType() {
+        assertEquals("double", bedroom2.getBedroomType());
     }
 
     @Test
