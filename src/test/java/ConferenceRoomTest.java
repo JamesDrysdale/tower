@@ -22,7 +22,10 @@ public class ConferenceRoomTest {
         assertEquals(5, conferenceRoom.getCapacity());
     }
 
-
+    @Test
+    public void emptyConferenceRoomHasNoGuests(){
+        assertEquals(0, conferenceRoom.guestCount());
+    }
 
 
 
