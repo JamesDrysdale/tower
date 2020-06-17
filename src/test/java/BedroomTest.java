@@ -39,6 +39,13 @@ public class BedroomTest {
         assertEquals(1, bedroom.guestCount());
     }
 
+    @Test
+    public void cantAddGuestToFullRoom(){
+        bedroom.addGuestToBedroom(guest);
+        bedroom.addGuestToBedroom(guest);
+        bedroom.addGuestToBedroom(guest);
+        assertEquals(2, bedroom.guestCount());
+    }
 
 
 }
