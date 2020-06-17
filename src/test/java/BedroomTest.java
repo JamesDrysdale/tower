@@ -5,16 +5,41 @@ import static org.junit.Assert.assertEquals;
 
 public class BedroomTest {
     private Bedroom bedroom;
+    private Guest guest;
 
     @Before
     public void before() {
-        bedroom = new Bedroom("The Royal Suite"/*, 22, 2*/);
+        bedroom = new Bedroom("The Royal Suite", 22, 2);
+        guest = new Guest("Jessica");
     }
 
     @Test
     public void roomHasName() {
         assertEquals("The Royal Suite", bedroom.getBedroomName());
     }
+
+    @Test
+    public void roomHasNumber(){
+        assertEquals(22, bedroom.getRoomNumber());
+    }
+
+    @Test
+    public void roomHasCapacity(){
+        assertEquals(2, bedroom.getCapacity());
+    }
+
+    @Test
+    public void emptyBedroomHasNoGuests(){
+        assertEquals(0, bedroom.guestCount());
+    }
+
+    @Test
+    public void canAddGuestToBedroom(){
+        bedroom.addGuestToBedroom(guest);
+        assertEquals(1, bedroom.guestCount());
+    }
+
+
 
 }
 
